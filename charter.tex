@@ -34,7 +34,7 @@
  
 \fechaINICIO{27 de junio de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlanificacion{22 de Agosto de 2020} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{22 de diciembre de 2020}		%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{22 de Junio de 2021}		%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -63,12 +63,9 @@
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
-1.0      & Creación del documento                                                          & 22/06/2020 \\ \hline
-1.1      & Ejemplo de un texto muy largo que debiera ocupar más de una línea para que tengan de ejemplo                                                                                																						   & dd/mm/aaaa \\ \hline
-1.2      & Otro ejemplo \newline
-		   Con texto partido \newline
-		   En varias líneas \newline
-		   A propósito                                                                     & dd/mm/aaaa \\ \hline
+1.0      & Creación del documento     & 27/06/2020 \\ \hline
+1.1      &                   &  \\ \hline
+1.2      &                   & \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -85,7 +82,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un\textcolor{red}{... completar con una descripción de una o dos líneas}, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con la Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un potenciostato de 30 canales para la realización en simultaneo de experimentos electroquímicos, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -108,131 +105,84 @@ Se adjunta a esta acta la planificación inicial.
 \section{Descripción técnica-conceptual del Proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{red}
-El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
-Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
+En la actualidad uno de los principales desafíos de la industria farmacéutica y de diagnóstico es la dificultad de encontrar moléculas capaces de actuar como biosensores. Debido a esto existen muy pocos dispositivos que permitan hacer mediciones y detección de patologías in-situ, recurriendo normalmente a análisis de laboratorio y procesos largos hasta obtener los resultados del estudio. 
+Aplife Biotech es una start-up de Argentina que está desarrollando una tecnología para optimizar estos procesos de descubrimiento de moléculas y así lograr dotar a la industria farmacéutica y de diagnóstico la capacidad de desarrollar dispositivos portátiles que detectan fácilmente y rápidamente problemas de salud. De esta forma se logrará descentralizar los ensayos de diagnósticos de los principales laboratorios y promoverá la portabilidad de estos ensayos. El desarrollo de esta tecnología también puede tener un gran impacto en el medioambiente donde muchas veces es necesaria una detección rápida de patógenos o agentes tóxicos.
 
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+El objetivo de este proyecto es el desarrollo de un potenciostato. Es un dispositivo que se usa para mediciones de electroquímica. Su funcionamiento principal es aplicar una magnitud física que provoque una reacción química que sea medida por el mismo equipo. Por lo tanto, van a ser los dispositivos encargados de encontrar qué moléculas se comportan mejor como transductor para la detección de cada patología o agente que se desee estudiar.\\
+El dispositivo a desarrollar tendrá como función principal aplicar un potencial variable en el tiempo y medir la corriente que genera la reacción electroquímica entre una molécula y una solución. Este está compuesto por 3 electrodos encargados de aplicar la tensión y tomar las lecturas de interés denominados Counter Electrode (CE), Working Electrode (WE) y Reference Electrode (RE). El CE es el encargado de aplicar la señal y el RE controla que la señal aplicada por el CE sea la esperada. El WE es donde se deposita la molécula que se desea estudiar y, por lo tanto, el encargado de realizar la medición.\\
+Los potenciostatos disponibles en el mercado tienen como máximo 16  canales limitando la cantidad de experimentos a realizar en simultáneo y prolongando los tiempos de los mismos. \\
+El equipo actual cuenta con 10 canales, 4 ADC, 1 DAC y todo es controlado por un microcontrolador de 8 bits.La empresa busca mejorar este prototipo aumentando la cantidad de canales a 36, mejorar la interfaz con el usuario mediante comunicación USB, permitir un almacenamiento interno de los datos obtenidos en las mediciones y realizar el control mediante una FPGA. Esto se debe a que se busca que el producto final sea un ASIC para así lograr agrupar una mayor cantidad de electrodos en un espacio menor y de esta forma masificar las mediciones. Estos ASIC van a necesitar un dispositivo donde sean conectados y puedan ser controlados. Por esta razón, como se muestra en la Figura \ref{fig:diagBloques}, se va a dividir el proyecto en dos partes: el potenciostato y el dispositivo de control. En la misma se muestra un único conjunto de electrodos de forma representativa.
 
-\begin{itemize}
-\item ¿Cómo se vincula este proyecto con la misión de la organización?
-\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
-\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
-\item ¿Cuales son las necesidades que debe satisfacer?
-\item ¿Por dónde pasa la innovación?
-\end{itemize}
-
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
-
-\vspace{25px}
-
-\begin{figure}[htpb]
+\begin{figure}[!ht]
 \centering 
-\includegraphics[width=.7\textwidth]{./Figuras/diagBloques.png}
+\includegraphics[width=1\textwidth]{./Figuras/diagrama_bloques.png}
 \caption{Diagrama en bloques del sistema}
 \label{fig:diagBloques}
 \end{figure}
 
-\vspace{25px}
-
-El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
-\end{consigna}
+El bloque del potenciostato consta de un sensor de temperatura, un DAC de 16 bits encargado de aplicar la señal seleccionada por el usuario y un ADC de 16 bits para la adquisición de datos. La señal analogica del DAC se aplica al CE mediante un circuito de realimentación cuya señal de control será tomada por el electrodo RE. Esta señal desencadena una reacción química en el electrodo WE que genera una corriente. Esta corriente puede ir desde los nA a los mA, por lo que es necesario un circuito de amplificación previo a hacer la conversión AD. Este debe poder ser manipulado por la FPGA para seleccionar el multiplicador adecuado para tener una correcta lectura en el ADC.
+ 
+El dispositivo de control gira en torno a una FPGA. La interfaz USB permite al usuario configurar la señal que quiere aplicar y ver los datos del experimento resultante desde cualquier PC mediante una aplicación UI. Además el FPGA debe procesar la información adquirida del ADC y del sensor de temperatura y almacenarla en una memoria RAM externa, para después transmitirla a la PC.
 
 
 \section{Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{red} 
-Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
- 
-Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
 
-\begin{itemize}
-\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
-\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
-\end{itemize}
-
-Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
-
-\begin{table}[ht]
+\begin{table}[H]
 %\caption{Identificación de los interesados}
 %\label{tab:interesados}
 \begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
-Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
+Cliente       & \clientename      &\empclientename	& CTO     	\\ \hline
+Responsable   & \authorname       & \empclientename & Ingeniera de Desarrollo \\ \hline
+Colaboradores & Iván G. Politzer  &\empclientename	& Ingeniero de Desarrollo  	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Opositores    &                  &              	&        	\\ \hline
+Usuario final &      -           &\empclientename 	&  -      	\\ \hline
 \end{tabularx}
 \end{table}
-
-El Director suele ser uno de los Orientadores.
-
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Sería deseable listar a continuación de la tabla las principales características de cada interesado.
- 
-Por ejemplo:
-\begin{itemize}
-\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
-\end{itemize}
-
-\end{consigna}
 
 
 
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
+El próposito de este proyecto es desarrollar un prototipo funcional de un potenciostato de múltiples canales que pueda realizar distintos tipos de pruebas de voltimetría y adquirir los datos de las reacciones electroquímicas que se produzcan. 
 
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
-\end{consigna}
 
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
+El presente proyecto incluye:
+\begin{itemize}
+\item Prototipo funcional.
+\item Desarrollo y documentación de firmware.
+\item Desarrollo de PCB para bloque de potenciostato.
+\item Documentación de hardware.
+\item Software para graficar las mediciones obtenidas.  
+\item Pruebas de validación y verificación.
+\end{itemize}
 
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
-
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
-
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
-
-\end{consigna}
+El presente proyecto no incluye:
+\begin{itemize}
+\item Desarrollo de una aplicación de PC para interfaz de usuario, el sistema debe ser controlado por línea de comando.
+\item Desarrollo de placa de dispositivo de control. El mismo se realizará con una placa de desarrollo de la marca elegida.
+\item Gabinete.
+\end{itemize}
 
 
 \section{3. Supuestos del proyecto}
 \label{sec:supuestos}
-
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
-
+Para el desarrollo del presente proyecto se supone que:
 \begin{itemize}
-\item Supuesto 1
-\item Supuesto 2...
+\item Los fondos estipulados estaran disponibles para la duración del proyecto.
+\item El tiempo para el desarrollo del mismo será suficiente.
+\item No surgirá ningún proyecto de mayor importancia en la empresa.
+\item Los materiales necesarios serán adquiridos en tiempo y forma.
 \end{itemize}
-
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-\end{consigna}
 
 \section{4. Requerimientos}
 \label{sec:requerimientos}
@@ -274,18 +224,14 @@ Y al escribirlos seguir las siguientes reglas:
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Cosas como: 
 \begin{itemize}
+\item Equipo funcionando
 \item Manual de uso
-\item Diagrama esquemático
 \item Código fuente
-\item Diagrama de instalación
 \item Informe final
 
 \end{itemize}
 
-\end{consigna}
 
 \section{6. Desglose del trabajo en tareas}
 \label{sec:wbs}
