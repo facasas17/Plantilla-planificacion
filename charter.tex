@@ -1,7 +1,7 @@
 \documentclass[11pt]{charter}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Multipotenciostato} 
+\titulo{Multi Potenciostato} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -82,7 +82,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con la Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un potenciostato de 30 canales para la realización en simultaneo de experimentos electroquímicos, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con la Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un potenciostato de 36 canales para la realización en simultáneo de experimentos electroquímicos, y tendrá un presupuesto preliminar estimado de 654 hs de trabajo, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -106,12 +106,22 @@ Se adjunta a esta acta la planificación inicial.
 \label{sec:descripcion}
 
 En la actualidad uno de los principales desafíos de la industria farmacéutica y de diagnóstico es la dificultad de encontrar moléculas capaces de actuar como biosensores. Debido a esto existen muy pocos dispositivos que permitan hacer mediciones y detección de patologías in-situ, recurriendo normalmente a análisis de laboratorio y procesos largos hasta obtener los resultados del estudio. 
-Aplife Biotech es una start-up de Argentina que está desarrollando una tecnología para optimizar estos procesos de descubrimiento de moléculas y así lograr dotar a la industria farmacéutica y de diagnóstico la capacidad de desarrollar dispositivos portátiles que detectan fácilmente y rápidamente problemas de salud. De esta forma se logrará descentralizar los ensayos de diagnósticos de los principales laboratorios y promoverá la portabilidad de estos ensayos. El desarrollo de esta tecnología también puede tener un gran impacto en el medioambiente donde muchas veces es necesaria una detección rápida de patógenos o agentes tóxicos.
 
-El objetivo de este proyecto es el desarrollo de un potenciostato. Es un dispositivo que se usa para mediciones de electroquímica. Su funcionamiento principal es aplicar una magnitud física que provoque una reacción química que sea medida por el mismo equipo. Por lo tanto, van a ser los dispositivos encargados de encontrar qué moléculas se comportan mejor como transductor para la detección de cada patología o agente que se desee estudiar.\\
-El dispositivo a desarrollar tendrá como función principal aplicar un potencial variable en el tiempo y medir la corriente que genera la reacción electroquímica entre una molécula y una solución. Este está compuesto por 3 electrodos encargados de aplicar la tensión y tomar las lecturas de interés denominados Counter Electrode (CE), Working Electrode (WE) y Reference Electrode (RE). El CE es el encargado de aplicar la señal y el RE controla que la señal aplicada por el CE sea la esperada. El WE es donde se deposita la molécula que se desea estudiar y, por lo tanto, el encargado de realizar la medición.\\
+Aplife Biotech es una Startup argentina que está desarrollando una tecnología para optimizar estos procesos de descubrimiento de moléculas y así lograr dotar a la industria farmacéutica y de diagnóstico la capacidad de desarrollar dispositivos portátiles que detecten fácil y rápidamente problemas de salud. De esta forma se logrará descentralizar los ensayos de diagnósticos de los principales laboratorios y promoverá la portabilidad de los mismos. El desarrollo de esta tecnología también puede tener un gran impacto en el medioambiente donde muchas veces es necesaria una detección rápida de patógenos o agentes tóxicos.
+
+El objetivo de este proyecto es el desarrollo de un potenciostato. Esto es un dispositivo que se usa para mediciones de electroquímica. Su funcionamiento principal es aplicar una magnitud física que provoque una reacción química que sea medida por el mismo equipo. Por lo tanto, van a ser los dispositivos encargados de encontrar qué moléculas se comportan mejor como transductor para la detección de cada patología o agente que se desee estudiar.\\
+El dispositivo a desarrollar tendrá como función principal aplicar un potencial variable en el tiempo y medir la corriente que genera la reacción electroquímica entre una molécula y una solución. Esto se conoce como voltimetria. \\
+Existen distintos tipos de voltimetria y este proyecto se va a centrar en 3: la voltimetría cíclica, la cuadrada y la rampa escalonada.
+\begin{itemize}
+\item \textbf{Voltimetría cíclica:} consiste en aplicar una onda triangular y medir la reacción. Esta medición puede ser de máximos y mínimos o de valores en intervalos establecidos por el usuario. También se configuran la altura de la onda triangular y la pendiente.
+\item \textbf{Voltimetría Cuadrada:} se aplica una onda cuadrada y se mide la reacción. La medición es nuevamente de máximos y mínimos o en un tiempo definido cuando la señal aplicada es máxima y cuando es mínima. Se configura la altura y el \textit{duty cycle}.
+\item \textbf{Voltimetría rampa escalonada (\textit{SWV: square wave voltammetry}):} es una onda cuadrada montada sobre una onda triangular. La medición se realiza en el 10\% antes que la señal cambie de tensión. Se pueden configurar la pendiente, el duty cycle y las tensiones máximas y mínimas. 
+\end{itemize}
+
+
+Un potenciostato está compuesto por 3 electrodos encargados de aplicar la tensión y tomar las lecturas de interés denominados Counter Electrode (CE), Working Electrode (WE) y Reference Electrode (RE). El CE es el encargado de aplicar la señal y el RE controla que la señal aplicada por el CE sea la esperada. El WE es donde se deposita la molécula que se desea estudiar y, por lo tanto, el encargado de realizar la medición.\\
 Los potenciostatos disponibles en el mercado tienen como máximo 16  canales limitando la cantidad de experimentos a realizar en simultáneo y prolongando los tiempos de los mismos. \\
-El equipo actual cuenta con 10 canales, 4 ADC, 1 DAC y todo es controlado por un microcontrolador de 8 bits.La empresa busca mejorar este prototipo aumentando la cantidad de canales a 36, mejorar la interfaz con el usuario mediante comunicación USB, permitir un almacenamiento interno de los datos obtenidos en las mediciones y realizar el control mediante una FPGA. Esto se debe a que se busca que el producto final sea un ASIC para así lograr agrupar una mayor cantidad de electrodos en un espacio menor y de esta forma masificar las mediciones. Estos ASIC van a necesitar un dispositivo donde sean conectados y puedan ser controlados. Por esta razón, como se muestra en la Figura \ref{fig:diagBloques}, se va a dividir el proyecto en dos partes: el potenciostato y el dispositivo de control. En la misma se muestra un único conjunto de electrodos de forma representativa.
+El equipo actual cuenta con 10 canales, 4 ADC, 1 DAC y todo es controlado por un microcontrolador de 8 bits. La empresa busca mejorar este prototipo aumentando la cantidad de canales a 36, mejorando la interfaz con el usuario mediante comunicación USB, permitiendo un almacenamiento interno de los datos obtenidos en las mediciones y realizando el control mediante una FPGA. Esto se debe a que se busca que el potenciostato final sea un ASIC para así lograr agrupar una mayor cantidad de electrodos en un espacio menor y de esta forma masificar las mediciones. Estos ASIC van a necesitar un dispositivo donde sean conectados y puedan ser controlados. Por esta razón, como se muestra en la Figura \ref{fig:diagBloques}, se va a dividir el proyecto en dos partes: el potenciostato y el dispositivo de control. En la misma se muestra un único conjunto de electrodos de forma representativa.
 
 \begin{figure}[!ht]
 \centering 
@@ -120,7 +130,7 @@ El equipo actual cuenta con 10 canales, 4 ADC, 1 DAC y todo es controlado por un
 \label{fig:diagBloques}
 \end{figure}
 
-El bloque del potenciostato consta de un sensor de temperatura, un DAC de 16 bits encargado de aplicar la señal seleccionada por el usuario y un ADC de 16 bits para la adquisición de datos. La señal analogica del DAC se aplica al CE mediante un circuito de realimentación cuya señal de control será tomada por el electrodo RE. Esta señal desencadena una reacción química en el electrodo WE que genera una corriente. Esta corriente puede ir desde los nA a los mA, por lo que es necesario un circuito de amplificación previo a hacer la conversión AD. Este debe poder ser manipulado por la FPGA para seleccionar el multiplicador adecuado para tener una correcta lectura en el ADC.
+El bloque del potenciostato consta de un sensor de temperatura, un DAC de 16 bits encargado de aplicar la señal seleccionada por el usuario y un ADC de 16 bits para la adquisición de datos. La señal analógica del DAC se aplica al CE mediante un circuito de realimentación cuya señal de control será tomada por el electrodo RE. Esta señal desencadena una reacción química en el electrodo WE que genera una corriente. Esta corriente puede ir desde los pA a los 100nA, por lo que es necesario un circuito de amplificación previo a hacer la conversión AD. Este debe poder ser manipulado por la FPGA para seleccionar el multiplicador adecuado para tener una correcta lectura en el ADC.
  
 El dispositivo de control gira en torno a una FPGA. La interfaz USB permite al usuario configurar la señal que quiere aplicar y ver los datos del experimento resultante desde cualquier PC mediante una aplicación UI. Además el FPGA debe procesar la información adquirida del ADC y del sensor de temperatura y almacenarla en una memoria RAM externa, para después transmitirla a la PC.
 
@@ -162,7 +172,7 @@ El presente proyecto incluye:
 \item Desarrollo y documentación de firmware.
 \item Desarrollo de PCB para bloque de potenciostato.
 \item Documentación de hardware.
-\item Software para graficar las mediciones obtenidas.  
+\item Programa en python para graficar las mediciones obtenidas.  
 \item Pruebas de validación y verificación.
 \end{itemize}
 
@@ -187,39 +197,38 @@ Para el desarrollo del presente proyecto se supone que:
 \section{4. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
-
 \begin{enumerate}
-\item Grupo de requerimientos asociados con...
+
+\item \textbf{Requerimientos generales del proyecto:}
+\begin{enumerate}
+	\item Debe poder controlarse mediante USB 3.1
+	\item La documentación del proyecto debe seguirse con control de versiones GIT.
+\end{enumerate}
+
+\item \textbf{Requerimientos de mediciones:}
+\begin{enumerate}
+	\item Se deben poder medir corrientes en el rango de 1pA hasta los 100nA. Rango previamente definido por el usuario.
+	\item El error de las mediciones, una vez seleccionado el rango de corriente, debe ser menor al 10\%
+	\item Todos los electrodos se tienen que poder medir en 1.6ms o a una frecuencia de 625Hz.
+	\item Se debe poder seleccionar si medir mínimos y máximos o tomar mediciones en intervalos de tiempo constantes y definidos por el usuario.
+\end{enumerate}
+
+\item \textbf{Requerimientos de voltimetría:}
+\begin{enumerate}
+	\item El DAC debe tener un rango de \underline{+}1.5V
+	\item Voltímetria cíclica
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2
-	\item Requerimiento 3 (prioridad menor)
+		\item Se debe poder seleccionar la pendiente entre 10mV/s a 500mV/s 
 	\end{enumerate}
-\item Grupo de requerimientos asociados con...
+	\item Voltimetría Cuadrada y Rampa escalonada
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2 (prioridad menor)
+		\item El duty cycle deber ser del 50\%
+		\item La altura de los saltos de tensión deben ser configurables
+		\item La medición se debe realizar en el ultimo 10\% del ancho de los pulsos antes de cambiar de estado.
 	\end{enumerate}
 \end{enumerate}
 
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-De ser posible indicar cómo se obtuvieron cada uno de los requerimientos 
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos. 
-
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-\item Ser breve y conciso (nadie lee cosas largas). 
-\item Ser específico: no dejar lugar a confusiones.
-\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
+\end{enumerate}
 
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
@@ -236,37 +245,64 @@ Y al escribirlos seguir las siguientes reglas:
 \section{6. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-Se recomienda mostrar el WBS mediante una lista indexada:
-
 \begin{enumerate}
-\item Grupo de tareas 1
+\item \textbf{Análisis preliminar (40 hs hs)} 
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+		\item Definición del alcance del proyecto (8 hs)
+		\item Definición de requerimientos (10 hs)
+		\item Planificación (6 hs)
+		\item Bibliografia de experimentos de voltimetria (16 hs)
 	\end{enumerate}
-\item Grupo de tareas 2
+\item \textbf{Diseño y construcción de hardware - Potenciostato (60 hs)}
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+		\item Revisión y re-diseño del circuito actual (8 hs)
+		\item Definición de circuito para la selección de amplificación pre conversor AD (10 hs)
+		\item Selección de componentes (10 hs)
+		\item Adquisición de componentes (2 hs)
+		\item Pruebas básicas de comportamiento del circuito (16 hs)
+		\item Desarrollo del PCB (8 hs)
+		\item Montaje del prototipo en el PCB (4 hs)
+		\item Documentación (2 hs)
 	\end{enumerate}
-	\item Grupo de tareas 3
+\item \textbf{Diseño y construcción de hardware - Dispositivo de control (124 hs)}
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
-	\item Tarea 4 (tantas hs)
-	\item Tarea 5 (tantas hs)
+		\item Estudio y selección de placa de desarrollo de FPGA (24 hs)
+		\item Estudio y selección de memoria RAM (24 hs)
+		\item Selección de tipo de alimentación externa (12 hs)
+		\item Adquisición de componentes elegidos (2 hs)
+		\item Pruebas iniciales en placa de desarrollo (36 hs)
+		\item Pruebas de potencia de alimentación externa (24 hs)
+		\item Documentación (2 hs)
+	\end{enumerate}
+\item \textbf{Desarrollo de firmware (200 hs)}
+	\begin{enumerate}
+		\item Driver conversor DA (36 hs)
+		\item Driver conversor AD (36 hs)
+		\item Driver de sensor de temperatura (24 hs)
+		\item Almacenamiento en memoria externa RAM (40 hs)
+		\item Comunicación USB (36 hs)
+		\item Módulo para la selección del circuito amplificador (24 hs)	
+		\item Documentación (4 hs)
+	\end{enumerate}		
+\item \textbf{Validación y Verificación (160 hs)}
+	\begin{enumerate}
+		\item Validación y verificación de señales aplicadas con el conversor DA (24 hs)
+		\item Validación y verificación de almacenamiento en memoria RAM externa (24 hs)
+		\item Validación y verificación de sensor de temperatura (24 hs)
+		\item Pruebas con soluciones electroquímicas conocidas (44 hs)
+		\item Ajustes de parametros a partir de los resultados obtenidos en las pruebas (36 hs)
+		\item Documentación (8 hs)
+	\end{enumerate}
+\item \textbf{Documentación (70 hs)}
+	\begin{enumerate}
+		\item Manual de uso (10 hs)
+		\item Memoria del trabajo final (50 hs)
+		\item Presentación final (10 hs)
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: (tantas hs)
+Cantidad total de horas: (654 hs)
 
-Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
-
-\end{consigna}
 
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
