@@ -1,7 +1,7 @@
 \documentclass[11pt]{charter}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Multi Potenciostato} 
+\titulo{Multi potenciostato} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -64,7 +64,7 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 1.0      & Creación del documento     & 27/06/2020 \\ \hline
-1.1      &                   &  \\ \hline
+1.1      & Se completó hasta el punto 6 inclusive  &   \\ 11/07/2020 \hline
 1.2      &                   & \\ \hline
 \end{tabularx}
 \end{table}
@@ -73,7 +73,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 
 
 
-\section{Acta de Constitución del Proyecto}
+\section{Acta de constitución del proyecto}
 \label{sec:acta}
 
 \begin{flushright}
@@ -102,26 +102,26 @@ Se adjunta a esta acta la planificación inicial.
 
 
 
-\section{Descripción técnica-conceptual del Proyecto a realizar}
+\section{Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-En la actualidad uno de los principales desafíos de la industria farmacéutica y de diagnóstico es la dificultad de encontrar moléculas capaces de actuar como biosensores. Debido a esto existen muy pocos dispositivos que permitan hacer mediciones y detección de patologías in-situ, recurriendo normalmente a análisis de laboratorio y procesos largos hasta obtener los resultados del estudio. 
+En la actualidad uno de los principales desafíos de la industria farmacéutica y de diagnóstico es la dificultad de encontrar moléculas capaces de actuar como biosensores. Debido a esto existen muy pocos dispositivos que permitan hacer mediciones y detección de patologías \textit{in-situ}, y se debe recurrir normalmente a análisis de laboratorio y procesos largos hasta obtener los resultados del estudio. 
 
-Aplife Biotech es una Startup argentina que está desarrollando una tecnología para optimizar estos procesos de descubrimiento de moléculas y así lograr dotar a la industria farmacéutica y de diagnóstico la capacidad de desarrollar dispositivos portátiles que detecten fácil y rápidamente problemas de salud. De esta forma se logrará descentralizar los ensayos de diagnósticos de los principales laboratorios y promoverá la portabilidad de los mismos. El desarrollo de esta tecnología también puede tener un gran impacto en el medioambiente donde muchas veces es necesaria una detección rápida de patógenos o agentes tóxicos.
+Aplife Biotech es una \textit{startup} argentina que está desarrollando una tecnología para optimizar estos procesos de descubrimiento de moléculas y así lograr dotar a la industria farmacéutica y de diagnóstico con la capacidad de desarrollar dispositivos portátiles que detecten fácil y rápidamente problemas de salud. De esta forma se logrará descentralizar los ensayos de diagnósticos de los principales laboratorios y promoverá su portabilidad. El desarrollo de esta tecnología también puede tener un gran impacto en el medioambiente donde muchas veces es necesaria una detección rápida de patógenos o agentes tóxicos.
 
-El objetivo de este proyecto es el desarrollo de un potenciostato. Esto es un dispositivo que se usa para mediciones de electroquímica. Su funcionamiento principal es aplicar una magnitud física que provoque una reacción química que sea medida por el mismo equipo. Por lo tanto, van a ser los dispositivos encargados de encontrar qué moléculas se comportan mejor como transductor para la detección de cada patología o agente que se desee estudiar.\\
-El dispositivo a desarrollar tendrá como función principal aplicar un potencial variable en el tiempo y medir la corriente que genera la reacción electroquímica entre una molécula y una solución. Esto se conoce como voltimetria. \\
-Existen distintos tipos de voltimetria y este proyecto se va a centrar en 3: la voltimetría cíclica, la cuadrada y la rampa escalonada.
+El objetivo de este proyecto es el desarrollo de un potenciostato. Esto es un dispositivo que se usa para mediciones de electroquímica. Su funcionamiento principal es aplicar una magnitud física que provoque una reacción química que sea medida por el mismo equipo. Por lo tanto, van a ser los dispositivos encargados de encontrar qué moléculas se comportan mejor como transductor para la detección de cada patología o agente que se desee estudiar. 
+
+El dispositivo a desarrollar tendrá como función principal aplicar un potencial variable en el tiempo y medir la corriente que genera la reacción electroquímica entre una molécula y una solución. Esto se conoce como voltametría. Existen distintos tipos de voltametría y este proyecto se va a centrar en tres: la voltametría cíclica, la cuadrada y la rampa escalonada.
 \begin{itemize}
-\item \textbf{Voltimetría cíclica:} consiste en aplicar una onda triangular y medir la reacción. Esta medición puede ser de máximos y mínimos o de valores en intervalos establecidos por el usuario. También se configuran la altura de la onda triangular y la pendiente.
-\item \textbf{Voltimetría Cuadrada:} se aplica una onda cuadrada y se mide la reacción. La medición es nuevamente de máximos y mínimos o en un tiempo definido cuando la señal aplicada es máxima y cuando es mínima. Se configura la altura y el \textit{duty cycle}.
-\item \textbf{Voltimetría rampa escalonada (\textit{SWV: square wave voltammetry}):} es una onda cuadrada montada sobre una onda triangular. La medición se realiza en el 10\% antes que la señal cambie de tensión. Se pueden configurar la pendiente, el duty cycle y las tensiones máximas y mínimas. 
+\item \textbf{Voltametría cíclica:} consiste en aplicar una onda triangular y medir la reacción. Esta medición puede ser de máximos y mínimos o de valores en intervalos establecidos por el usuario. También se configuran la altura de la onda triangular y la pendiente.
+\item \textbf{Voltametría Cuadrada:} se aplica una onda cuadrada y se mide la reacción. La medición es nuevamente de máximos y mínimos o en un tiempo definido cuando la señal aplicada es máxima y cuando es mínima. Se configura la altura y el \textit{duty cycle}.
+\item \textbf{Voltametría rampa escalonada (\textit{SWV: square wave voltammetry}):} es una onda cuadrada montada sobre una onda triangular. La medición se realiza en el 10\% antes que la señal cambie de tensión. Se pueden configurar la pendiente, el duty cycle y las tensiones máximas y mínimas. 
 \end{itemize}
 
 
-Un potenciostato está compuesto por 3 electrodos encargados de aplicar la tensión y tomar las lecturas de interés denominados Counter Electrode (CE), Working Electrode (WE) y Reference Electrode (RE). El CE es el encargado de aplicar la señal y el RE controla que la señal aplicada por el CE sea la esperada. El WE es donde se deposita la molécula que se desea estudiar y, por lo tanto, el encargado de realizar la medición.\\
-Los potenciostatos disponibles en el mercado tienen como máximo 16  canales limitando la cantidad de experimentos a realizar en simultáneo y prolongando los tiempos de los mismos. \\
-El equipo actual cuenta con 10 canales, 4 ADC, 1 DAC y todo es controlado por un microcontrolador de 8 bits. La empresa busca mejorar este prototipo aumentando la cantidad de canales a 36, mejorando la interfaz con el usuario mediante comunicación USB, permitiendo un almacenamiento interno de los datos obtenidos en las mediciones y realizando el control mediante una FPGA. Esto se debe a que se busca que el potenciostato final sea un ASIC para así lograr agrupar una mayor cantidad de electrodos en un espacio menor y de esta forma masificar las mediciones. Estos ASIC van a necesitar un dispositivo donde sean conectados y puedan ser controlados. Por esta razón, como se muestra en la Figura \ref{fig:diagBloques}, se va a dividir el proyecto en dos partes: el potenciostato y el dispositivo de control. En la misma se muestra un único conjunto de electrodos de forma representativa.
+Un potenciostato está compuesto por 3 electrodos encargados de aplicar la tensión y tomar las lecturas de interés denominados \textit{Counter Electrode} (CE), \textit{Working Electrode} (WE) y \textit{Reference Electrode} (RE). El CE es el encargado de aplicar la señal y el RE controla que la señal aplicada por el CE sea la esperada. El WE es donde se deposita la molécula que se desea estudiar y, por lo tanto, el encargado de realizar la medición. Los potenciostatos disponibles en el mercado tienen como máximo 16  canales limitando la cantidad de experimentos a realizar en simultáneo y prolongando su tiempo de los mismos. 
+
+El equipo actual que posee Aplife Biotech S.A. cuenta con 10 canales, 4 ADC, 1 DAC y todo es controlado por un microcontrolador de 8 bits. La empresa busca mejorar este prototipo aumentando la cantidad de canales a 36, mejorando la interfaz con el usuario mediante comunicación USB, permitiendo un almacenamiento interno de los datos obtenidos en las mediciones y realizando el control mediante una FPGA. Esto se debe a que se busca que el potenciostato final sea un ASIC para así lograr agrupar una mayor cantidad de electrodos en un espacio menor y de esta forma masificar las mediciones. Estos ASIC van a necesitar un dispositivo donde sean conectados y puedan ser controlados. Por esta razón, como se muestra en la Figura \ref{fig:diagBloques}, se va a dividir el proyecto en dos partes: el potenciostato y el dispositivo de control. En la misma se muestra un único conjunto de electrodos de forma representativa.
 
 \begin{figure}[!ht]
 \centering 
@@ -130,7 +130,7 @@ El equipo actual cuenta con 10 canales, 4 ADC, 1 DAC y todo es controlado por un
 \label{fig:diagBloques}
 \end{figure}
 
-El bloque del potenciostato consta de un sensor de temperatura, un DAC de 16 bits encargado de aplicar la señal seleccionada por el usuario y un ADC de 16 bits para la adquisición de datos. La señal analógica del DAC se aplica al CE mediante un circuito de realimentación cuya señal de control será tomada por el electrodo RE. Esta señal desencadena una reacción química en el electrodo WE que genera una corriente. Esta corriente puede ir desde los pA a los 100nA, por lo que es necesario un circuito de amplificación previo a hacer la conversión AD. Este debe poder ser manipulado por la FPGA para seleccionar el multiplicador adecuado para tener una correcta lectura en el ADC.
+El bloque del potenciostato consta de un sensor de temperatura, un DAC de 16 bits encargado de aplicar la señal seleccionada por el usuario y un ADC de 16 bits para la adquisición de datos. La señal analógica del DAC se aplica al CE mediante un circuito de realimentación cuya señal de control será tomada por el electrodo RE. Esta señal desencadena una reacción química en el electrodo WE que genera una corriente. Esta corriente puede ir desde los pA a los 100 nA, por lo que es necesario un circuito de amplificación previo a hacer la conversión AD. Este debe poder ser manipulado por la FPGA para seleccionar el multiplicador adecuado para tener una correcta lectura en el ADC.
  
 El dispositivo de control gira en torno a una FPGA. La interfaz USB permite al usuario configurar la señal que quiere aplicar y ver los datos del experimento resultante desde cualquier PC mediante una aplicación UI. Además el FPGA debe procesar la información adquirida del ADC y del sensor de temperatura y almacenarla en una memoria RAM externa, para después transmitirla a la PC.
 
@@ -150,8 +150,7 @@ Cliente       & \clientename      &\empclientename	& CTO     	\\ \hline
 Responsable   & \authorname       & \empclientename & Ingeniera de Desarrollo \\ \hline
 Colaboradores & Iván G. Politzer  &\empclientename	& Ingeniero de Desarrollo  	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
-Opositores    &                  &              	&        	\\ \hline
-Usuario final &      -           &\empclientename 	&  -      	\\ \hline
+Usuario final & Biólogos y Biotecnólogos         &\empclientename 	&  -      	\\ \hline
 \end{tabularx}
 \end{table}
 
@@ -179,7 +178,7 @@ El presente proyecto incluye:
 El presente proyecto no incluye:
 \begin{itemize}
 \item Desarrollo de una aplicación de PC para interfaz de usuario, el sistema debe ser controlado por línea de comando.
-\item Desarrollo de placa de dispositivo de control. El mismo se realizará con una placa de desarrollo de la marca elegida.
+\item Fabricación del PCB de dispositivo de control, que se realizará con una placa de desarrollo de la marca elegida.
 \item Gabinete.
 \end{itemize}
 
@@ -188,8 +187,8 @@ El presente proyecto no incluye:
 \label{sec:supuestos}
 Para el desarrollo del presente proyecto se supone que:
 \begin{itemize}
-\item Los fondos estipulados estaran disponibles para la duración del proyecto.
-\item El tiempo para el desarrollo del mismo será suficiente.
+\item Los fondos estipulados estarán disponibles para la duración del proyecto.
+\item El tiempo para el desarrollo será suficiente.
 \item No surgirá ningún proyecto de mayor importancia en la empresa.
 \item Los materiales necesarios serán adquiridos en tiempo y forma.
 \end{itemize}
@@ -207,22 +206,22 @@ Para el desarrollo del presente proyecto se supone que:
 
 \item \textbf{Requerimientos de mediciones:}
 \begin{enumerate}
-	\item Se deben poder medir corrientes en el rango de 1pA hasta los 100nA. Rango previamente definido por el usuario.
+	\item Se deben poder medir corrientes en el rango de 1 pA hasta los 100 nA. Rango previamente definido por el usuario.
 	\item El error de las mediciones, una vez seleccionado el rango de corriente, debe ser menor al 10\%
-	\item Todos los electrodos se tienen que poder medir en 1.6ms o a una frecuencia de 625Hz.
+	\item Todos los electrodos se tienen que poder medir en 1,6m s o a una frecuencia de 625Hz.
 	\item Se debe poder seleccionar si medir mínimos y máximos o tomar mediciones en intervalos de tiempo constantes y definidos por el usuario.
 \end{enumerate}
 
-\item \textbf{Requerimientos de voltimetría:}
+\item \textbf{Requerimientos de voltametría:}
 \begin{enumerate}
-	\item El DAC debe tener un rango de \underline{+}1.5V
-	\item Voltímetria cíclica
+	\item El DAC debe tener un rango de \underline{+}1,5 V
+	\item Voltametría cíclica
 	\begin{enumerate}
-		\item Se debe poder seleccionar la pendiente entre 10mV/s a 500mV/s 
+		\item Se debe poder seleccionar la pendiente entre 10 mV/s a 500 mV/s 
 	\end{enumerate}
-	\item Voltimetría Cuadrada y Rampa escalonada
+	\item Voltametría cuadrada y rampa escalonada
 	\begin{enumerate}
-		\item El duty cycle deber ser del 50\%
+		\item El \textit{duty cycle} deber ser del 50\%
 		\item La altura de los saltos de tensión deben ser configurables
 		\item La medición se debe realizar en el ultimo 10\% del ancho de los pulsos antes de cambiar de estado.
 	\end{enumerate}
@@ -290,7 +289,7 @@ Para el desarrollo del presente proyecto se supone que:
 		\item Validación y verificación de almacenamiento en memoria RAM externa (24 hs)
 		\item Validación y verificación de sensor de temperatura (24 hs)
 		\item Pruebas con soluciones electroquímicas conocidas (44 hs)
-		\item Ajustes de parametros a partir de los resultados obtenidos en las pruebas (36 hs)
+		\item Ajustes de parámetros a partir de los resultados obtenidos en las pruebas (36 hs)
 		\item Documentación (8 hs)
 	\end{enumerate}
 \item \textbf{Documentación (70 hs)}
