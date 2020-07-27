@@ -70,6 +70,7 @@
 \usepackage{tabularx}
 \usepackage{pgfgantt} 
 \usepackage{graphicx}
+\usepackage{pdflscape}
 
 
 %\usepackage{tikz}
@@ -157,8 +158,12 @@
 	
 	{\normalsize Director:\\}
 	{\Large \supname \hspace{1px} (\pertesupname) \\}
+	\vspace{1cm}
+
+	{\normalsize Co-director:\\}
+	{\Large \cosupname \hspace{1px} (\pertesupname) \\}
 	\vspace{2cm}
-		
+	
 	{\normalsize Jurados:\\}	
 	{\Large \jurunoname \hspace{1px} (\perteunoame) \\
 			\jurdosname \hspace{1px} (\pertedosame) \\

@@ -14,11 +14,11 @@
 \autor{Fabiola de las Casas Escardó} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
-\pertenenciaDirector{pertenencia} 
+\director{Juan Manuel Reta}
+\pertenenciaDirector{UNER} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
-\codirector{} % si queda vacio no se deberíá incluir 
-\pertenenciaCoDirector{}
+\codirector{Eduardo Filomena} % si queda vacio no se deberíá incluir 
+\pertenenciaCoDirector{UNER}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
 \cliente{Guido Rozenblum}
@@ -32,9 +32,9 @@
 \juradoTres{Nombre y Apellido (3)}
 \pertenenciaJurTres{pertenencia (3)}
  
-\fechaINICIO{27 de junio de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaINICIO{27 de Junio de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlanificacion{22 de Agosto de 2020} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{22 de Junio de 2021}		%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{28 de Mayo de 2021}		%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -82,7 +82,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con la Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un potenciostato de 36 canales para la realización en simultáneo de experimentos electroquímicos, y tendrá un presupuesto preliminar estimado de 660 hs de trabajo, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con la Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un potenciostato de 32 canales para la realización en simultáneo de experimentos electroquímicos, y tendrá un presupuesto preliminar estimado de 660 hs de trabajo, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -93,7 +93,10 @@ Se adjunta a esta acta la planificación inicial.
 \centering
 \begin{tabular}{ccc}
 \begin{tabular}[c]{@{}c@{}}Ariel Lutenberg \\ Director posgrado FIUBA\end{tabular} &  & \begin{tabular}[c]{@{}c@{}}\clientename \\ \empclientename \end{tabular} \vspace{2.5cm} \\ 
-\multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \supname \\ Director del Trabajo Final\end{tabular}} \vspace{2.5cm} \\
+\multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \supname \\ Director del Trabajo Final \\
+\\
+\cosupname \\ Co-director del Trabajo Final
+\end{tabular}} \vspace{2.5cm} \\
 \begin{tabular}[c]{@{}c@{}}\jurunoname \\ Jurado del Trabajo Final\end{tabular}     &  & \begin{tabular}[c]{@{}c@{}}\jurdosname\\ Jurado del Trabajo Final\end{tabular}  \vspace{2.5cm}  \\
 \multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \jurtresname\\ Jurado del Trabajo Final\end{tabular}} \vspace{.5cm}                                                                     
 \end{tabular}
@@ -149,12 +152,12 @@ Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
 Cliente       & \clientename      &\empclientename	& CTO     	\\ \hline
 Responsable   & \authorname       & \empclientename & Ingeniera de Desarrollo \\ \hline
 Colaboradores & Iván G. Politzer  &\empclientename	& Ingeniero de Desarrollo  	\\ \hline
-Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
+%Orientador    & \supname  & \pertesupname	& Director	Trabajo final \\ \hline
+\multicolumn{1}{|c|}{} & \supname     & \pertesupname   & Director del Trabajo final \\ \cline{2-4} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{Orientadores}} & \cosupname  & \pertesupname  & Co-director del Trabajo final \\ \hline
 Usuario final & Biólogos y Biotecnólogos         &\empclientename 	&  -      	\\ \hline
 \end{tabularx}
 \end{table}
-
-
 
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
@@ -313,96 +316,67 @@ Cantidad total de horas: (660 hs)
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
-
-%La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
-
-%\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
-
-\end{consigna}
-
-\begin{figure}[htpb]
+\begin{figure}[H]
 \centering 
 \includegraphics[width=1\textwidth]{./Figuras/Activity-On-Node1.png}
-\caption{Diagrama en \textit{Activity on Node}}
+\caption{Diagrama en \textit{Activity on Node}. Primera parte}
 \label{fig:AoN1}
 \end{figure}
 
-\begin{figure}[htpb]
+\begin{figure}[H]
 \centering 
 \includegraphics[width=1\textwidth]{./Figuras/Activity-On-Node2.png}
-\caption{Diagrama en \textit{Activity on Node}}
+\caption{Diagrama en \textit{Activity on Node}. Segunda parte}
 \label{fig:AoN2}
 \end{figure}
-
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
-
-
 
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-Utilizar el software Gantter for Google Drive o alguno similar para dibujar el diagrama de Gantt.
-
-Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre las cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de gantt de ejemplo}
+\begin{figure}[H]
+\centering 
+\includegraphics[width=1\textwidth]{./Figuras/tabla_gantt.png}
+\caption{Tabla de tareas del diagrama gantt}
+\label{fig:gantt_tabla}
+\end{figure}
+\begin{landscape}
+\begin{figure}[H]
+\centering 
+\includegraphics[width=1.6\textwidth]{./Figuras/gantt_full.png}
+\caption{Diagrama de gantt}
 \label{fig:gantt}
 \end{figure}
 
-\end{consigna}
+\end{landscape}
 
 \section{9. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
 
-
-\begin{table}[htpb]
+\begin{table}[H]
 \label{tab:recursos}
-\centering
-\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|X|@{}}
+\begin{tabular}{|c|c|c|c|c|c|}
 \hline
-\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{3}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-5} 
-\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & Computadora & FPGA  &  Laboratorio  \\ \hline
- &  &  &  &    \\ \hline
- &  &  &  &   \\ \hline
- &  &  &  &    \\ \hline
- &  &  &  &    \\ \hline
-\end{tabularx}%
+\cellcolor[HTML]{C0C0C0} &
+  \cellcolor[HTML]{C0C0C0} &
+  \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
+\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}Código WBS} &
+  \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}Nombre Tarea} &
+  \multicolumn{1}{l|}{PC} &
+  \multicolumn{1}{l|}{FPGA} &
+  \multicolumn{1}{l|}{Lab. electrónico} &
+  \multicolumn{1}{l|}{Lab. químico} \\ \hline
+1         & Análisis preliminar             & 40  & 0   & 0   & 0  \\ \hline
+2         & Hardware - Potenciostato        & 44  & 0   & 0   & 0  \\ \hline
+2.5       & Pruebas básicas del circuito    & 0   & 0   & 16  & 0  \\ \hline
+2.7       & Montaje de prototipo            & 0   & 0   & 4   & 0  \\ \hline
+3.1 - 3.4 & Dispositivo de control          & 62  & 0   & 0   & 0  \\ \hline
+3.5       & Pruebas en FPGA                 & 0   & 36  & 0   & 0  \\ \hline
+3.6       & Pruebas de alimentación         & 0   & 0   & 24  & 0  \\ \hline
+4         & Desarrollo de firmware          & 206 & 206 & 0   & 0  \\ \hline
+5         & Validación y verificación       & 0   & 116 & 116 & 0  \\ \hline
+5.4       & Pruebas con soluciones químicas & 0   & 44  & 0   & 44 \\ \hline
+6         & Documentación                   & 70  & 0   & 0   & 0  \\ \hline
+\end{tabular}
 \end{table}
 
 
