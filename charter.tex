@@ -65,7 +65,7 @@
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 1.0      & Creación del documento     & 27/06/2020 \\ \hline
 1.1      & Se completó hasta el punto 6 inclusive  & 11/07/2020  \\ \hline
-1.2      &                   & \\ \hline
+1.2      & Se completó hasta el punto 11 inclusive y se realizaron las correcciones indicadas                  & 29/07/2020\\ \hline
 \end{tabularx}
 \end{table}
 
@@ -383,17 +383,6 @@ Cantidad total de horas: (660 hs)
 \section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-\end{consigna}
-
 \begin{table}[htpb]
 \centering
 \begin{tabularx}{\linewidth}{@{}|X|c|r|r|@{}}
@@ -405,83 +394,110 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+Componentes electrónicos potenciostato & 
+  \multicolumn{1}{c|}{1} & 
+  \multicolumn{1}{c|}{U\$S 110} &
+  \multicolumn{1}{c|}{U\$S 110} \\ \hline
+Placa de desarrollo FPGA &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{U\$S 200} &
+  \multicolumn{1}{c|}{U\$S 200} \\ \hline
+Horas de ingeniería &
+  \multicolumn{1}{c|}{660hs} &
+  \multicolumn{1}{c|}{U\$S 10} &
+  \multicolumn{1}{c|}{U\$S 6.600} \\ \hline
+Soluciones químicas &  
+  \multicolumn{1}{c|}{40} &
+  \multicolumn{1}{c|}{U\$S 10} &
+  \multicolumn{1}{c|}{U\$S 400} \\ \hline 
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{U\$S 7.310} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
+\hline
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+30\% del total de los costos directos &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{U\$S 2.193} &
+  \multicolumn{1}{c|}{U\$S 2.193} \\ \hline 
 \multicolumn{3}{|c|}{SUBTOTAL} &
   \multicolumn{1}{c|}{} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
-   \\ \hline
+ U\$S 9.503  \\ \hline
 \end{tabularx}%
 \end{table}
 
 
 \section{11. Matriz de asignación de responsabilidades}
 \label{sec:responsabilidades}
-\begin{consigna}{red}
-Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
 
-\begin{table}[htpb]
+\begin{table}[H]
 \centering
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|c|c|c|c|c|}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l|l|c|c|c|c|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-\cellcolor[HTML]{C0C0C0} &
-  \cellcolor[HTML]{C0C0C0} &
-  \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Listar todos los nombres y roles del proyecto} \\ \cline{3-6} 
-\rowcolor[HTML]{C0C0C0} 
-\cellcolor[HTML]{C0C0C0} &
-  \cellcolor[HTML]{C0C0C0} &
+\multicolumn{1}{|c|}{\cellcolor[HTML]{C0C0C0}} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} &
   Responsable &
-  Orientador &
+  Orientadores &
   Equipo &
   Cliente \\ \cline{3-6} 
-\rowcolor[HTML]{C0C0C0} 
-\multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} &
-  \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea} &
-  \authorname &
-  \supname &
-  Nombre de alguien &
-  \clientename \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código \\ WBS\end{tabular}}} &
+  \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea}} &
+  \begin{tabular}[c]{@{}c@{}}Fabiola \\ de las Casas Escardó\end{tabular} &
+  \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Juan Manuel Reta\\ Eduardo Filomena\end{tabular}} &
+  \multicolumn{1}{l|}{Iván G. Pollitzer} &
+  \multicolumn{1}{l|}{Guido Rozenblum} \\ \hline
+1 &
+  Análisis preliminar & P & C & - &  S \\ \hline
+2.1 &
+  \begin{tabular}[c]{@{}l@{}}Revisión y re-diseño \\ del circuito actual\end{tabular} &  P & C & - & - \\ \hline
+2.2 &
+  \begin{tabular}[c]{@{}l@{}}Definición de circuito \\ de amplificación\end{tabular} &  P &  C & - & - \\ \hline
+2.3 &  Selección de componentes &  P &  - & S & I \\ \hline
+2.4 &
+  Adquisición de componentes &  S & - &  P & A \\ \hline
+2.5 &
+  Pruebas básicas de circuito &  P & - & S & I \\ \hline
+2.6 &
+  Desarrollo PCB & P & - & - & - \\ \hline
+2.7 &
+  Montaje de prototipo en PCB &  S & - &  P & - \\ \hline
+3.1 &
+  Estudio y selección de FPGA &  P & C & I & - \\ \hline
+3.2 &
+  Estudio y selección de RAM &  P & C & I & - \\ \hline
+3.3 &
+  Selección alimentación externa & P & C & I & - \\ \hline
+3.4 &
+  Adquisición de componentes & S & - & P & A \\ \hline
+3.5 &
+  Pruebas iniciales con FPGA & P & C & - & - \\ \hline
+3.6 &
+  \begin{tabular}[c]{@{}l@{}}Pruebas de potencia de \\ alimentación externa\end{tabular} &  P & C & - & - \\ \hline
+4 &
+  Desarrollo de firmware & P & C & S & - \\ \hline
+5.1 &
+  \begin{tabular}[c]{@{}l@{}}V y V de señales del \\ conversor DA\end{tabular} &
+  P & I & S & C / A \\ \hline
+5.2 &
+  \begin{tabular}[c]{@{}l@{}}V y V de almacenamiento \\ en RAM\end{tabular} &
+  P &  I & S & A \\ \hline
+5.3 &
+  \begin{tabular}[c]{@{}l@{}}V y V de sensor de \\ temperatura\end{tabular} &
+  P & I & S & C / A \\ \hline
+5.4 &
+  \begin{tabular}[c]{@{}l@{}}Pruebas con soluciones \\ electroquímicas conocidas\end{tabular} & P & I & S & S \\ \hline
+5.5 &
+  Ajustes de parámetros & P & C & S & A \\ \hline
+6 &
+  Documentación & P & C / A & - & I \\ \hline
 \end{tabular}%
 }
 \end{table}
@@ -496,13 +512,6 @@ Referencias:
 	\item C = Consultado
 \end{itemize}
 } %footnotesize
-
-Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
-A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
-
-Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
-
-\end{consigna}
 
 \section{12. Gestión de riesgos}
 \label{sec:riesgos}
