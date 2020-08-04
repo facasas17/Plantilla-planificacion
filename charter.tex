@@ -238,7 +238,10 @@ Para el desarrollo del presente proyecto se supone que:
 
 \end{enumerate}
 
-\section{5. Entregables principales del proyecto}
+\section{5. Historias de usuarios (\textit{Product backlog})}
+\label{sec:backlog}
+
+\section{6. Entregables principales del proyecto}
 \label{sec:entregables}
 
 \begin{itemize}
@@ -250,7 +253,7 @@ Para el desarrollo del presente proyecto se supone que:
 \end{itemize}
 
 
-\section{6. Desglose del trabajo en tareas}
+\section{7. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
 \begin{enumerate}
@@ -313,7 +316,7 @@ Para el desarrollo del presente proyecto se supone que:
 Cantidad total de horas: (660 hs)
 
 
-\section{7. Diagrama de Activity On Node}
+\section{8. Diagrama de Activity On Node}
 \label{sec:AoN}
 
 \begin{figure}[H]
@@ -330,7 +333,7 @@ Cantidad total de horas: (660 hs)
 \label{fig:AoN2}
 \end{figure}
 
-\section{8. Diagrama de Gantt}
+\section{9. Diagrama de Gantt}
 \label{sec:gantt}
 
 \begin{figure}[H]
@@ -349,7 +352,7 @@ Cantidad total de horas: (660 hs)
 
 \end{landscape}
 
-\section{9. Matriz de uso de recursos de materiales}
+\section{10. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
 
 \begin{table}[H]
@@ -380,7 +383,7 @@ Cantidad total de horas: (660 hs)
 \end{table}
 
 
-\section{10. Presupuesto detallado del proyecto}
+\section{11. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
 \begin{table}[htpb]
@@ -433,7 +436,7 @@ Descripción &
 \end{table}
 
 
-\section{11. Matriz de asignación de responsabilidades}
+\section{12. Matriz de asignación de responsabilidades}
 \label{sec:responsabilidades}
 
 \begin{table}[H]
@@ -513,72 +516,172 @@ Referencias:
 \end{itemize}
 } %footnotesize
 
-\section{12. Gestión de riesgos}
+\section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos)
+\textbf{Riesgo 1:} Imposibilidad para cumplir los plazos del proyecto.
 \begin{itemize}
-\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-Justificar el motivo por el cual se asigna determinado número de severidad (S).
-\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
-
-Riesgo 2:
-\begin{itemize}
-\item Severidad (S): 
-\item Ocurrencia (O):
+\item Severidad (S): 8, retrasaría la entrega del prototipo funcional al cliente.
+\item Probabilidad de ocurrencia (O): 3, la empresa brindará soporte alivianando la carga de otros proyectos del responsable.
 \end{itemize}
 
-Riesgo 3:
+\textbf{Riesgo 2:} Errores en el diseño del prototipo
 \begin{itemize}
-\item Severidad (S): 
-\item Ocurrencia (O):
+\item Severidad (S): 9, genera retrasos y un aumento de costos.
+\item Probabilidad de ocurrencia (O): 7, hay tener en cuenta muchas especificaciones de las distintas partes del prototipo.
 \end{itemize}
 
+\textbf{Riesgo 3:} Demoras en la importación de componentes.
+\begin{itemize}
+\item Severidad (S): 8, genera un retraso general 
+\item Probabilidad de ocurrencia (O): 8, debido a la situación actual (pandemia CoVID-19) hay mucha incerteza con lo relacionado a la importación.
+\end{itemize}
+
+\textbf{Riesgo 4:} Demora y complejidad de los ensayos electroquímicos
+\begin{itemize}
+\item Severidad (S): 7, no se lograria validar el funcionamiento final del proyecto.
+\item Probabilidad de ocurrencia (O): 4, actualmente ya se están realizando algunos experimentos, por lo que se tiene la experiencia y apoyo suficiente para diminuir este riesgo.
+\end{itemize}
+
+\textbf{Riesgo 5:} Cambio de especificaciones por parte del cliente
+\begin{itemize}
+\item Severidad (S): 7, dependiendo que especificación se pida modificar el riesgo puede ser menor.
+\item Probabilidad de ocurrencia (O): 7, al ser un producto para realizar mediciones electroquimicas nuevas, no se conoce con demasiada presicion las verdaderas necesidades del prototipo final.
+\end{itemize}
 
 b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 
-\begin{table}[htpb]
+\begin{table}[H]
 \centering
-\begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
+\begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-\end{tabularx}%
+1      & 8 & 3 & 24  & -  &  - & -    \\ \hline
+2      & 9 & 7 & 63  & 7  & 5  & 35   \\ \hline
+3      & 8 & 8 & 64  & 6  & 7  & 42     \\ \hline
+4      & 7 & 4 & 28  & -  & -  &      \\ \hline
+5      & 7 & 7 & 49  & 6  & 5  & 30   \\ \hline
+\end{tabular}
 \end{table}
 
 Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a ....
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 45.
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
- 
-Riesgo 1: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
 
-Riesgo 2: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: Plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación)
+Riesgo 2: se realizarán consultas y validaciones del diseño al director y co-director. Además el prototipo se realizará en módulos acoplables y de esta manera, si hay un error de diseño solo será necesario cambiar dicho modulo.
+\begin{itemize}
+\item Severidad (S*): 7, se verá afectado solo el modulo con el error por lo que se podrá continuar con el resto del proyecto, mientras se fábrica nuevamente dicho modulo corregido.
+\item Probabilidad de ocurrencia (O*): 5, al tener revisiones periódicas con el director y co-director aumenta al probabilidad de detectar estos errores con tiempo.
+\end{itemize}
+Riesgo 3: se buscarán proveedores locales y en caso de no haber, se aumentará la cantidad de cada componente pedido al exterior. De esta forma, en caso de haber demora solo se producirá en ese único pedido.
+\begin{itemize}
+\item Severidad (S*): 6, las proveedores locales disponen de la mayoría de los componentes requeridos, pero a un precio mayor en algunos casos.
+\item Probabilidad de ocurrencia (O*): 7, el contexto actual excede una previsión precisa y hay componentes que solo se consiguen en el exterior.
+\end{itemize}
+Riesgo 5: se extenderán los rangos máximos de los distintos experimentos a realizar, basado en bibliografía existente, y se incluirán las prestaciones de los equipos disponibles en el mercado, confirmando con el cliente todas las definiciones.
+\begin{itemize}
+\item Severidad (S*): 6, al ampliar las prestaciones y rangos de medición pedidos por el cliente se anticipan posibles cambios futuros.
+\item Probabilidad de ocurrencia (O*): 5, el cliente siempre puede buscar cambiar las especificaciones pero al haber confirmado todo previo al comienzo del proyecto ya esta al tanto de las limitaciones del mismo.
+\end{itemize}
 
-\end{consigna}
-
-
-\section{13. Gestión de la calidad}
+\section{14. Gestión de la calidad}
 \label{sec:calidad}
+
+\begin{itemize}
+\item \textbf{Req \#1.1:} Debe poder controlarse mediante USB 3.1.
+
+Verificación y validación:
+\begin{itemize}
+\item Verificación: 
+\item Validación: 
+\end{itemize}
+
+\item \textbf{Req. \#1.2:} La documentación del proyecto debe seguirse con control de versiones GIT.
+
+Verificación y validación:
+\begin{itemize}
+\item Verificación: 
+\item Validación: 
+\end{itemize}
+
+\item\textbf{ Req. \#2.1:} Se deben poder medir corrientes en el rango de 1 pA hasta los 100 nA. Rango previamente definido por el usuario.
+
+Verificación y validación:
+\begin{itemize}
+\item Verificación: 
+\item Validación: 
+\end{itemize}
+
+\item \textbf{Req. \#2.2:} El error de las mediciones, una vez seleccionado el rango de corriente, debe ser menor al 10\%.
+
+Verificación y validación:
+\begin{itemize}
+\item Verificación: 
+\item Validación: 
+\end{itemize}
+
+\item \textbf{Req. \#2.3:} Todos los electrodos se tienen que poder medir en 1,6 ms o a una frecuencia de 625Hz.
+
+Verificación y validación:
+\begin{itemize}
+\item Verificación: 
+\item Validación: 
+\end{itemize}
+
+\item \textbf{Req. \#2.4:} Se debe poder seleccionar si medir mínimos y máximos o tomar mediciones en intervalos de tiempo constantes y definidos por el usuario.
+
+Verificación y validación:
+\begin{itemize}
+\item Verificación: 
+\item Validación: 
+\end{itemize}
+
+\item \textbf{Req. \#3.1:} El DAC debe tener un rango de \underline{+}1,5 V
+
+Verificación y validación:
+\begin{itemize}
+\item Verificación: 
+\item Validación: 
+\end{itemize}
+
+\item \textbf{Req. \#3.2:} Voltametría cíclica: Se debe poder seleccionar la pendiente entre 10 mV/s a 1 V/s 
+
+Verificación y validación:
+\begin{itemize}
+\item Verificación: 
+\item Validación: 
+\end{itemize}
+
+\item \textbf{Req. \#3.3:} Voltametría cuadrada y rampa escalonada: el \textit{duty cycle} deber ser del 50\%, la altura de los saltos de tensión deben ser configurables y la medición se debe realizar en el ultimo 10\% del ancho de los pulsos antes de cambiar de estado.
+
+Verificación y validación:
+\begin{itemize}
+\item Verificación: 
+\item Validación: 
+\end{itemize}
+
+\item \textbf{Req. \#4.1:} Los electrodos deben estar recubiertos de oro y serán provistos por la empresa.
+
+Verificación y validación:
+\begin{itemize}
+\item Verificación: 
+\item Validación: 
+\end{itemize}
+
+\item \textbf{Req. \#4.2:} Los electrodos deben estar en un PCB separado para que puedan ser conectados y desconectados al potenciostato.
+
+Verificación y validación:
+\begin{itemize}
+\item Verificación: 
+\item Validación: 
+\end{itemize}
+\end{itemize}
+
+
 
 \begin{consigna}{red}
 Para cada uno de los requerimientos del proyecto indique:
@@ -600,36 +703,59 @@ Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos
 
 \end{consigna}
 
-\section{14. Comunicación del proyecto}
+\section{15. Comunicación del proyecto}
 \label{sec:comunicaciones}
 
-\begin{consigna}{red}
-El plan de comunicación del proyecto es el siguiente:
-\end{consigna}
-
-% Please add the following required packages to your document preamble:
-% \usepackage{graphicx}
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-\begin{table}[htpb]
+\begin{table}[H]
 \centering
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|c|l|l|l|l|l|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}PLAN DE COMUNICACIÓN DEL PROYECTO}           \\ \hline
+\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}PLAN DE COMUNICACIÓN DEL PROYECTO} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
-¿Qué comunicar? & Audiencia & Propósito & Frecuencia & Método de comunicac. & Responsable \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-\end{tabular}%
-}
+¿Qué comunicar? &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Audiencia} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Propósito} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Frecuencia} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Método de comunicac.} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Responsable} \\ \hline
+Plan de trabajo &
+  \begin{tabular}[c]{@{}l@{}}Todos los\\ interesados\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Informar del alcance \\ del proyecto\end{tabular} &
+  Una vez &
+  Reunión online &
+  \begin{tabular}[c]{@{}l@{}}Fabiola de las \\ Casas Escardó\end{tabular} \\ \hline
+Avance del trabajo &
+  \begin{tabular}[c]{@{}l@{}}Director\\ Co-director\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Informar y validar el \\ progreso\end{tabular} &
+  15 días &
+  Reuniones online &
+  \begin{tabular}[c]{@{}l@{}}Fabiola de las \\ Casas Escardó\end{tabular} \\ \hline
+Consultas &
+  \begin{tabular}[c]{@{}l@{}}Director\\ Co-director\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Sugerencias y \\ búsqueda de soluciones\end{tabular} &
+  15 días &
+  Reuniones online &
+  \begin{tabular}[c]{@{}l@{}}Fabiola de las \\ Casas Escardó\end{tabular} \\ \hline
+Pruebas de aceptación &
+  Cliente &
+  \begin{tabular}[c]{@{}l@{}}Validación del \\ prototipo\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Al finalizar el \\ prototipo\end{tabular} &
+  Reunión presencial &
+  \begin{tabular}[c]{@{}l@{}}Fabiola de las \\ Casas Escardó\end{tabular} \\ \hline
+Finalización del proyecto &
+  \begin{tabular}[c]{@{}l@{}}Todos los\\ interesados\end{tabular} &
+  Conocer los resultados &
+  \begin{tabular}[c]{@{}l@{}}Al finalizar\\ el proyecto\end{tabular} &
+  Reunión online &
+  \begin{tabular}[c]{@{}l@{}}Fabiola de las \\ Casas Escardó\end{tabular} \\ \hline
+\end{tabular}
+}%
 \end{table}
 
-\section{15. Gestión de Compras}
+
+\section{16. Gestión de Compras}
 \label{sec:compras}
 
 \begin{consigna}{red}
@@ -638,7 +764,7 @@ a) Explique con qué criterios elegiría a un proveedor.
 b) Redacte el Statement of Work correspondiente.
 \end{consigna}
 
-\section{16. Seguimiento y control}
+\section{17. Seguimiento y control}
 \label{sec:seguimiento}
 
 \begin{consigna}{red}
@@ -665,7 +791,7 @@ Tarea del WBS & Indicador de avance & Frecuencia de reporte & Resp. de seguimien
 %}
 \end{table}
 
-\section{17. Procesos de cierre}    
+\section{18. Procesos de cierre}    
 \label{sec:cierre}
 
 \begin{consigna}{red}
