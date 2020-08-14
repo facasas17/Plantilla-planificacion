@@ -239,10 +239,61 @@ Para el desarrollo del presente proyecto se supone que:
 
 \end{enumerate}
 
-\section{5. Historias de usuarios (\textit{Product backlog})}
+\section{Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\section{6. Entregables principales del proyecto}
+
+\begin{itemize}
+
+\item Como biólogo quiero poder elegir que experimento realizar con el objetivo de tener un único dispositivo que me permita realizar todos los experimentos.
+\begin{itemize}
+\item Ponderación: 5
+\item Prioridad: 5
+\end{itemize}
+
+\item Como biólogo quiero que el dispositivo funcione de forma independiente con el objetivo de una vez configurado el experimento no tenga que estar atento del mismo hasta que finalice.
+\begin{itemize}
+\item Ponderación: 4
+\item Prioridad: 3
+\end{itemize}
+
+\item Como biólogo quiero poder configurar las características del experimento con el objetivo de realizar experimentos con distintas características.
+\begin{itemize}
+\item Ponderación: 7
+\item Prioridad: 4
+\end{itemize}
+
+\item Como biólogo quiero que los datos se guarden en una memoria externa con el objetivo de poder acceder a ellos desde una PC posteriormente.
+\begin{itemize}
+\item Ponderación: 8 
+\item Prioridad: 4
+\end{itemize}
+
+\item Como biólogo quiero hacer mediciones en XX electrodos con el objetivo de tener un grupo considerable de aptámeros entre los cuales seleccionar el que mayor afinidad tenga con la molécula estudiada.
+\begin{itemize}
+\item Ponderación: 8
+\item Prioridad: 5
+\end{itemize}
+
+\item Como biólogo quiero que los experimentos tengas un error menor al 10\% con el objetivo de tener una mayor precisión del resultado de la reacción electroquímica.
+\begin{itemize}
+\item Ponderación: 7
+\item Prioridad: 4
+\end{itemize}
+
+\item Como biólogo quiero poder medir los electrodos de forma simultánea con el objetivo de conocer las reacciones electroquímicas de cada electrodo en las mismas condiciones.
+\begin{itemize}
+\item Ponderación: 8
+\item Prioridad: 5
+\end{itemize}
+
+\end{itemize}
+
+\emph{Criterio de ponderación adoptado:} Se tomarán valores entre 10 y 1, siendo 10 aquella de mayor tamaño y 1 la de menor. La ponderación tendrá en cuenta la complejidad y el conocimiento para realizar dicha historia.
+
+\emph{Criterio de prioridad adoptado:} Se tomarán valores entre 5 y 1, siendo 5 la máxima prioridad y 1 la mínima.
+
+\section{5. Entregables principales del proyecto}
 \label{sec:entregables}
 
 \begin{itemize}
@@ -254,11 +305,11 @@ Para el desarrollo del presente proyecto se supone que:
 \end{itemize}
 
 
-\section{7. Desglose del trabajo en tareas}
+\section{6. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
 \begin{enumerate}
-\item \textbf{Análisis preliminar (40 hs hs)} 
+\item \textbf{Análisis preliminar (40 hs)} 
 	\begin{enumerate}
 		\item Definición del alcance del proyecto (8 hs)
 		\item Definición de requerimientos (10 hs)
@@ -317,7 +368,7 @@ Para el desarrollo del presente proyecto se supone que:
 Cantidad total de horas: (660 hs)
 
 
-\section{8. Diagrama de Activity On Node}
+\section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
 
 \begin{figure}[H]
@@ -334,7 +385,7 @@ Cantidad total de horas: (660 hs)
 \label{fig:AoN2}
 \end{figure}
 
-\section{9. Diagrama de Gantt}
+\section{8. Diagrama de Gantt}
 \label{sec:gantt}
 
 \begin{figure}[H]
@@ -353,7 +404,7 @@ Cantidad total de horas: (660 hs)
 
 \end{landscape}
 
-\section{10. Matriz de uso de recursos de materiales}
+\section{9. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
 
 \begin{table}[H]
@@ -384,7 +435,7 @@ Cantidad total de horas: (660 hs)
 \end{table}
 
 
-\section{11. Presupuesto detallado del proyecto}
+\section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
 \begin{table}[htpb]
@@ -437,7 +488,7 @@ Descripción &
 \end{table}
 
 
-\section{12. Matriz de asignación de responsabilidades}
+\section{11. Matriz de asignación de responsabilidades}
 \label{sec:responsabilidades}
 
 \begin{table}[H]
@@ -517,7 +568,7 @@ Referencias:
 \end{itemize}
 } %footnotesize
 
-\section{13. Gestión de riesgos}
+\section{12. Gestión de riesgos}
 \label{sec:riesgos}
 
 \textbf{Riesgo 1:} Imposibilidad para cumplir los plazos del proyecto.
@@ -540,7 +591,7 @@ Referencias:
 
 \textbf{Riesgo 4:} Demora y complejidad de los ensayos electroquímicos
 \begin{itemize}
-\item Severidad (S): 7, no se lograria validar el funcionamiento final del proyecto.
+\item Severidad (S): 7, no se lograría validar el funcionamiento final del proyecto.
 \item Probabilidad de ocurrencia (O): 4, actualmente ya se están realizando algunos experimentos, por lo que se tiene la experiencia y apoyo suficiente para diminuir este riesgo.
 \end{itemize}
 
@@ -573,9 +624,9 @@ Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplic
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
 
-Riesgo 2: se realizarán consultas y validaciones del diseño al director y co-director. Además el prototipo se realizará en módulos acoplables y de esta manera, si hay un error de diseño solo será necesario cambiar dicho modulo.
+Riesgo 2: se realizarán consultas y validaciones del diseño al director y co-director. Además el prototipo se realizará en módulos acoplables y de esta manera, si hay un error de diseño solo será necesario cambiar dicho módulo.
 \begin{itemize}
-\item Severidad (S*): 7, se verá afectado solo el modulo con el error por lo que se podrá continuar con el resto del proyecto, mientras se fábrica nuevamente dicho modulo corregido.
+\item Severidad (S*): 7, se verá afectado solo el módulo con el error por lo que se podrá continuar con el resto del proyecto, mientras se fábrica nuevamente dicho módulo corregido.
 \item Probabilidad de ocurrencia (O*): 5, al tener revisiones periódicas con el director y co-director aumenta al probabilidad de detectar estos errores con tiempo.
 \end{itemize}
 Riesgo 3: se buscarán proveedores locales y en caso de no haber, se aumentará la cantidad de cada componente pedido al exterior. De esta forma, en caso de haber demora solo se producirá en ese único pedido.
@@ -589,7 +640,7 @@ Riesgo 5: se extenderán los rangos máximos de los distintos experimentos a rea
 \item Probabilidad de ocurrencia (O*): 5, el cliente siempre puede buscar cambiar las especificaciones pero al haber confirmado todo previo al comienzo del proyecto ya esta al tanto de las limitaciones del mismo.
 \end{itemize}
 
-\section{14. Gestión de la calidad}
+\section{13. Gestión de la calidad}
 \label{sec:calidad}
 
 \begin{itemize}
@@ -636,7 +687,7 @@ Verificación y validación:
 \end{itemize}
 
 
-\section{15. Comunicación del proyecto}
+\section{14. Comunicación del proyecto}
 \label{sec:comunicaciones}
 
 \begin{table}[H]
@@ -688,12 +739,12 @@ Finalización del proyecto &
 \end{table}
 
 
-\section{16. Gestión de Compras}
+\section{15. Gestión de Compras}
 \label{sec:compras}
 
 Como se indicó en la matriz de asignación de responsabilidades las compras serán realizadas por otro integrante de la empresa. Por lo que los proveedores de los componentes electrónicos necesarios y la empresa encargada de la fabricación del PCB serán seleccionados por dicha persona.
  
-\section{17. Seguimiento y control}
+\section{16. Seguimiento y control}
 \label{sec:seguimiento}
 
 \begin{table}[H]
@@ -749,7 +800,7 @@ Como se indicó en la matriz de asignación de responsabilidades las compras ser
   \begin{tabular}[c]{@{}l@{}}Juan Manuel Reta\\ Eduardo Filomena\end{tabular} &
   \begin{tabular}[c]{@{}l@{}}Correo \\ electrónico\end{tabular} \\ \hline
 4 &
-  \begin{tabular}[c]{@{}l@{}}Drivers y \\ modulos \\ funcionando\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Drivers y \\ módulos \\ funcionando\end{tabular} &
   \begin{tabular}[c]{@{}l@{}}Cada 15 días hasta \\ terminar la tarea\end{tabular} &
   \begin{tabular}[c]{@{}l@{}}Fabiola de las \\ Casas Escardó\end{tabular} &
   \begin{tabular}[c]{@{}l@{}}Juan Manuel Reta\\ Eduardo Filomena\end{tabular} &
@@ -790,7 +841,7 @@ Como se indicó en la matriz de asignación de responsabilidades las compras ser
 \end{tabular}
 \end{table}
 
-\section{18. Procesos de cierre}    
+\section{17. Procesos de cierre}    
 \label{sec:cierre}
 
 \begin{itemize}
@@ -798,7 +849,7 @@ Como se indicó en la matriz de asignación de responsabilidades las compras ser
 \item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original, a cargo de la Ing. \authorname
 \begin{itemize}
 \item Evaluación de las tareas y los tiempos: se armará una tabla en la cual se comparará las tareas propuestas con las realizadas y los tiempos propuestos con los reales. Se calculará el desvío y las causas de dicho desvío, si lo hubo.
-\item Evaluación de costos: se analizará el costo inicial del proyecto y el costo real a la finalización. Si hay diferencias, se evaluará en que puntos se produjeron y debido a qué. 
+\item Evaluación de costos: se analizará el costo inicial del proyecto y el costo real a la finalización. Si hay diferencias, se evaluará en qué puntos se produjeron y debido a qué. 
 \end{itemize}
 
 \item Se realizará un informe identificando las técnicas y procedimientos útiles e inútiles que se utilizaron, y los problemas que surgieron y cómo se solucionaron, a cargo de la Ing. \authorname
