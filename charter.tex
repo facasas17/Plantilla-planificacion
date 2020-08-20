@@ -68,6 +68,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.2      & Se completó hasta el punto 11 inclusive y se realizaron las correcciones indicadas                  & 29/07/2020\\ \hline
 1.3      & Se completó desde el punto 12 hasta el 18   & 07/08/2020\\ \hline
 1.4      & Se completó el punto historias de usuarios y se realizaron las correciones indicadas  & 12/08/2020\\ \hline
+1.5      & Se modificaron definiciones y fecha de inicio  & 17/08/2020\\ \hline
 \end{tabularx}
 \end{table}
 
@@ -424,7 +425,7 @@ Cantidad total de horas: (666 hs)
 \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}Código WBS} &
   \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}Nombre Tarea} &
   \multicolumn{1}{l|}{PC} &
-  \multicolumn{1}{l|}{FPGA} &
+  \multicolumn{1}{l|}{Controlador} &
   \multicolumn{1}{l|}{Lab. electrónico} &
   \multicolumn{1}{l|}{Lab. químico} \\ \hline
 1         & Análisis preliminar             & 40  & 0   & 0   & 0  \\ \hline
@@ -432,7 +433,7 @@ Cantidad total de horas: (666 hs)
 2.5       & Pruebas básicas del circuito    & 0   & 0   & 16  & 0  \\ \hline
 2.7       & Montaje de prototipo            & 0   & 0   & 4   & 0  \\ \hline
 3.1 - 3.4 & Dispositivo de control          & 62  & 0   & 0   & 0  \\ \hline
-3.5       & Pruebas en FPGA                 & 0   & 36  & 0   & 0  \\ \hline
+3.5       & Pruebas en dispositivo de control & 0   & 36  & 0   & 0  \\ \hline
 3.6       & Pruebas de alimentación         & 0   & 0   & 24  & 0  \\ \hline
 4         & Desarrollo de firmware          & 206 & 206 & 0   & 0  \\ \hline
 5         & Validación y verificación       & 0   & 116 & 116 & 0  \\ \hline
@@ -460,7 +461,7 @@ Componentes electrónicos potenciostato &
   \multicolumn{1}{c|}{1} & 
   \multicolumn{1}{c|}{U\$S 110} &
   \multicolumn{1}{c|}{U\$S 110} \\ \hline
-Placa de desarrollo FPGA &
+Placa de desarrollo de controlador &
   \multicolumn{1}{c|}{1} &
   \multicolumn{1}{c|}{U\$S 200} &
   \multicolumn{1}{c|}{U\$S 200} \\ \hline
@@ -518,47 +519,52 @@ Descripción &
   \multicolumn{1}{l|}{Guido Rozenblum} \\ \hline
 1 &
   Análisis preliminar & P & C & - &  S \\ \hline
-2.1 &
-  \begin{tabular}[c]{@{}l@{}}Revisión y re-diseño \\ del circuito actual\end{tabular} &  P & C & - & - \\ \hline
-2.2 &
-  \begin{tabular}[c]{@{}l@{}}Definición de circuito \\ de amplificación\end{tabular} &  P &  C & - & - \\ \hline
-2.3 &  Selección de componentes &  P &  - & S & I \\ \hline
-2.4 &
-  Adquisición de componentes &  S & - &  P & A \\ \hline
-2.5 &
-  Pruebas básicas de circuito &  P & - & S & I \\ \hline
-2.6 &
-  Desarrollo PCB & P & - & - & - \\ \hline
-2.7 &
-  Montaje de prototipo en PCB &  S & - &  P & - \\ \hline
+2 &
+  Definiciones generales & P & C & - &  S \\ \hline 
 3.1 &
-  Estudio y selección de FPGA &  P & C & I & - \\ \hline
+  \begin{tabular}[c]{@{}l@{}}Revisión y re-diseño \\ del circuito actual\end{tabular} &  P & C & - & - \\ \hline
 3.2 &
-  Estudio y selección de RAM &  P & C & I & - \\ \hline
-3.3 &
-  Selección alimentación externa & P & C & I & - \\ \hline
-3.4 &
-  Adquisición de componentes & S & - & P & A \\ \hline
+  \begin{tabular}[c]{@{}l@{}}Definición de circuito \\ de amplificación\end{tabular} &  P &  C & - & - \\ \hline
+3.3 &  Diseño de ensayos a realizar &  P &  C & - & I \\ \hline
+3.4 &  Selección de componentes &  P &  - & S & I \\ \hline
 3.5 &
-  Pruebas iniciales con FPGA & P & C & - & - \\ \hline
+  Adquisición de componentes &  S & - &  P & A \\ \hline
 3.6 &
+  Pruebas básicas de circuito &  P & - & S & I \\ \hline
+3.7 &
+  Desarrollo PCB & P & - & - & - \\ \hline
+3.8 &
+  Montaje de prototipo en PCB &  S & - &  P & - \\ \hline
+4.1 &
+  Estudio y selección de arquitectura &  P & C & I & - \\ \hline
+4.2 &
+  Estudio y selección de RAM &  P & C & I & - \\ \hline
+4.3 &
+  Selección alimentación externa & P & C & I & - \\ \hline
+4.4 &
+  Diseño de los ensayos & P & C & - & I \\ \hline
+4.5 &
+  Adquisición de componentes & S & - & P & A \\ \hline
+4.6 &
+  Pruebas iniciales con controlador & P & C & - & - \\ \hline
+4.7 &
   \begin{tabular}[c]{@{}l@{}}Pruebas de potencia de \\ alimentación externa\end{tabular} &  P & C & - & - \\ \hline
-4 &
+5 &
   Desarrollo de firmware & P & C & S & - \\ \hline
-5.1 &
-  \begin{tabular}[c]{@{}l@{}}V y V de señales del \\ conversor DA\end{tabular} &
+6.1 &
+  \begin{tabular}[c]{@{}l@{}}Verificación de señales del \\ conversor DA\end{tabular} &
   P & I & S & C / A \\ \hline
-5.2 &
-  \begin{tabular}[c]{@{}l@{}}V y V de almacenamiento \\ en RAM\end{tabular} &
+6.2 &
+  \begin{tabular}[c]{@{}l@{}}Verificación de almacenamiento \\ en RAM\end{tabular} &
   P &  I & S & A \\ \hline
-5.3 &
-  \begin{tabular}[c]{@{}l@{}}V y V de sensor de \\ temperatura\end{tabular} &
+6.3 &
+  \begin{tabular}[c]{@{}l@{}}Verificación de sensor de \\ temperatura\end{tabular} &
   P & I & S & C / A \\ \hline
-5.4 &
+6.4 &
   \begin{tabular}[c]{@{}l@{}}Pruebas con soluciones \\ electroquímicas conocidas\end{tabular} & P & I & S & S \\ \hline
-5.5 &
+6.5 &
   Ajustes de parámetros & P & C & S & A \\ \hline
-6 &
+7 &
   Documentación & P & C / A & - & I \\ \hline
 \end{tabular}%
 }
